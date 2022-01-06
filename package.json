@@ -1,0 +1,30 @@
+{
+  "name": "eleventy-netlify-pscale",
+  "version": "1.0.0",
+  "description": "An example site on netlify using eleventy and pscale (and nunjucks and tailwind)",
+  "scripts": {
+    "build": "netlify build",
+    "start": "netlify dev",
+    "debug": "DEBUG=* netlify deploy",
+    "deploy": "netlify deploy --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krider2010/eleventy-netlify-pscale.git"
+  },
+  "author": {
+    "name": "Claire Knight",
+    "url": "https://www.krider.co.uk/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krider2010/eleventy-netlify-pscale/issues"
+  },
+  "homepage": "https://github.com/krider2010/eleventy-netlify-pscale#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "markdown-it": "^12.3.0",
+    "mysql2": "^2.3.3",
+    "netlify-cli": "^8.6.4"
+  }
+}

@@ -1,0 +1,7 @@
+[build]
+  command = "eleventy"
+  functions = "functions"
+  publish = "_site"
+
+[dev]
+  command = "eleventy --serve --quiet"

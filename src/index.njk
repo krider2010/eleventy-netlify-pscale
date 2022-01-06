@@ -1,0 +1,13 @@
+---
+title: Homepage
+layout: layouts/base.njk
+permalink: /
+---
+<p>Hello! Welcome to the Eleventy + Netlify + PlanetScale "Because @krider2010 Can" site!</p>
+
+Posts...
+<ul>
+{% for post in posts %}
+  <li><a href="/post/{{ post.title | slug }}/">{{ post.title }}</a> ({{ post.published | dtFormat }})</li>
+{% endfor %}
+</ul>
