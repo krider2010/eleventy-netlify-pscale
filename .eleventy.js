@@ -1,5 +1,4 @@
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const english = new Intl.DateTimeFormat('en-UK');
 
@@ -13,9 +12,6 @@ module.exports = (eleventyConfig) => {
   // Libraries
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  // Plugins
-  eleventyConfig.addPlugin(pluginRss);
-
   // Filters
   eleventyConfig.addFilter("dtFormat", function(date) {
     return english.format(date);
@@ -24,6 +20,7 @@ module.exports = (eleventyConfig) => {
 	  return markdownLibrary.render(str);
 	});
 
+  eleventyConfig.addPassthroughCopy({'src/output.css': 'css/output.css'});
 
   eleventyConfig.setDataDeepMerge(true);
 

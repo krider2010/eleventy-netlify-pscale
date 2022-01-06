@@ -5,7 +5,7 @@
   "scripts": {
     "build": "netlify build",
     "start": "netlify dev",
-    "debug": "DEBUG=* netlify deploy",
+    "debug": "netlify dev --inspect",
     "deploy": "netlify deploy --prod"
   },
   "repository": {

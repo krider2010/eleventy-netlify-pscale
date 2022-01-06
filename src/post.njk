@@ -7,8 +7,8 @@ pagination:
 permalink: "/post/{{ post.title | slug }}/"
 eleventyComputed:
 ---
-<h2>{{ post.title }}</h2>
-
-<p>Posted on {{ post.published | dtFormat }}</p>
-
-{{ post.body | markdown | safe }}
+<div>
+  <h2>{{ post.title }}</h2>
+  <p class="text-gray-700 text-sm">Posted on {{ post.published | dtFormat }}</p>
+  <p>{{ post.body | markdown | safe }}</p>
+</div>
