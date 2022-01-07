@@ -1,7 +1,13 @@
 [build]
   command = "eleventy"
-  functions = "functions"
+  functions = "src/functions"
   publish = "_site"
 
 [dev]
   command = "eleventy --serve --quiet"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true

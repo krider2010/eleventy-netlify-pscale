@@ -11,3 +11,21 @@ Posts...
   <li><a href="/post/{{ post.title | slug }}/">{{ post.title }}</a> ({{ post.published | dtFormat }})</li>
 {% endfor %}
 </ul>
+
+<p style="padding-top: 10px;">
+  Want to get notified of posts? Sign up here! <span style="font-style: italic;">Please note - this is not operational in the deployed site to avoid spam!</span>
+  <br/>
+  <form class="email-form" name="subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <div hidden aria-hidden="true">
+    <label>
+      Don’t fill this out if you're human:
+      <input name="bot-field" />
+    </label>
+  </div>
+  <label for="email">Your email address</label>
+  <div>
+    <input type="email" name="email" placeholder="Email"  id="email" required />
+    <button type="submit">Subscribe</button>
+  </div>
+</form>
+</p>
